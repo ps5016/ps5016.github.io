@@ -1,0 +1,291 @@
+<!doctype html>
+    <html>
+        <head>
+            <title>messy moodboard archive</title>
+            <link rel="shortcut icon"
+        href="icon.png">
+            <meta charset="UTF-8">
+            <style>
+                #caps-lock {
+                    z-index: 1;
+                    top: 0vh;
+                    position: absolute;
+                    left: 0vw;
+                    width: 100vw;
+                    color:#7b7b7bdd;
+                    font-size: 40px;
+                    font-family: Georgia;
+                    text-align: justify;
+                }
+                #lemony {
+                    position: absolute;
+                    color:rgb(0, 0, 0);
+                    background-color:rgb(255, 255, 255);
+                    right: 25vw;
+                    top: 155vh;
+                    width: 15vw;
+                    font-size: 20px;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-align: justify;
+                }
+                #water {
+                    z-index: -10;
+                    position: fixed;
+                    top: 0vh;
+                    left: -8vw;
+                    width: 120vw;
+                }
+                :root {
+                    --drape-height: 80vh; 
+                }
+                #drape {
+                    z-index: 3;
+                    position: absolute;
+                    top: 100vh;
+                    left: 0vw;
+                    height: var(--drape-height);
+                    opacity: 0.9;
+                }
+                #sheep {
+                    /* Ayaka Endo */
+                    z-index: 3;
+                    position: absolute;
+                    top: 80vh;
+                    left: 40.5vw;
+                    width: 40vw;
+                    opacity: 0.9;
+                }
+                #portfolio
+                {
+                    z-index: 3;
+                    position: absolute;
+                    top: calc(80vh + 49vh);
+                    left: 30vw;
+                    font-size: 30px;
+                    font-family: Superclarendon;
+                    letter-spacing: -2px;
+                    width: 30vw;
+                    /* color:#efd4ff; */
+                    background-color: rgb(91, 96, 100);
+                    text-align: justify;
+                }
+                #portfolio:link {
+                    color: black;
+                    text-decoration: none; 
+                }
+                #portfolio:visited {
+                color: rgb(16, 95, 16);
+                text-decoration: none; 
+                }
+                #portfolio:hover {
+                color: rgb(255, 255, 181);
+                letter-spacing: 1px;
+                /* font-style: italic;  */
+                }
+                #portfolio:active {
+                color: rgb(166, 166, 255);
+                font-family: Arial Black;
+                letter-spacing: .4px;
+                }
+                #exposure-tree {
+                    z-index: 3;
+                    position: absolute;
+                    top: 180vh;
+                    left: 30.5vw;
+                    width: 35vw;
+                    opacity: 0.9;
+                }
+                #sign {
+                    position: absolute;
+                    color:rgb(252, 255, 203);
+                    background-color:rgb(57, 57, 57);
+                    left: 8vw;
+                    top: 180vh;
+                    width: 12vw;
+                    font-size: 30px;
+                    font-family: Superclarendon;
+                    font-style: italic;
+                    text-align: left;
+                }
+                #lets-go {
+                    z-index: 3;
+                    position: absolute;
+                    top: 250vh;
+                    left: 1vw;
+                    width: 20vw;
+                    opacity: 1;
+                }
+                #bird-glass-window {
+                    z-index: -5;
+                    position: fixed;
+                    top: 50vh;
+                    left: 10vw;
+                    height: 35vh;
+                }
+                #ivory-flower {
+                    /*Philipp Otto Runge (German 1777 - 1810)*/
+                    z-index: -5;
+                    position: fixed;
+                    bottom: 2vh;
+                    left: 1vw;
+                    height: 20vw;
+                }
+                #white-flower {
+                    /*The J. Paul Getty Museum*/
+                    z-index: -1;
+                    position: fixed;
+                    bottom: 20vh;
+                    right: 20vw;
+                    height: 30vh;
+                }
+                #clock {
+                    z-index: 10;
+                    position: fixed;
+                    top: 5vh;
+                    right: 15vw;
+                    width: 5vw;
+                    transition: height 3s ease-in-out;
+                }
+                #clock:hover {
+                    right: 20vw;
+                    width: 35vh;
+                }
+                #blue-shelf {
+                    /*Heaven Bound, Thomas Barger, 2020, Paper pulp, plywood, polyurethane, and paint, 68 x 23 x 26.5 inches (172.7 x 58.4 x 67.3 cm)*/
+                    z-index: 0;
+                    position: fixed;
+                    bottom: 0vh;
+                    right: 18vw;
+                    width: 12vw;
+                }
+                #jp-stool {
+                    /*Japanese Meiji period (1868-1912) lacquer box in the Shibayama style made of hundreds and hundreds of carved flowers of mother of pearl and coral and jade and tortoiseshell and maybe ivory 😬 in the @royalcollectiontrust - this one was a gift to Queen Mary from her son and his wife. Googling “intensive Japanese carving course”*/
+                    position: fixed;
+                    bottom: 0vh;
+                    right: 25vw;
+                    width: 15vw;
+                }
+                #unicorns {
+                    z-index: -5;
+                    position: fixed;
+                    top: 5vh;
+                    left: 2vw;
+                    width: 32vw;
+                }
+                #swan-top {
+                    z-index: 5;
+                    position: absolute;
+                    top: 95vh;
+                    right: 35vw;
+                    width: 20vw;
+                }
+                #cherry-top {
+                    z-index: 6;
+                    position: absolute;
+                    top: 0vh;
+                    right: 42vw;
+                    width: 15vw;
+                }
+                #mm-bomber {
+                    /* Martin Margiela S/S 2002, Artisanal Circle Jacket, constructed from a men’s brown leather ‘bomber’.
+                    Part of our Permanent Collection. #martinmargiela #martinmargielaarchive*/
+                    z-index: 5;
+                    position: absolute;
+                    top: 20vh;
+                    right: 30vw;
+                    width: 15vw;
+                }
+                #alaia-skirt {
+                    /* Alaia Fall 1983 Mini Skirt */
+                    z-index: 6;
+                    position: absolute;
+                    top: 38vh;
+                    right: 1vw;
+                    width: 18vw;
+                }
+                #koji-kuga-boots {
+                    z-index: 5;
+                    position: absolute;
+                    top: 40vh;
+                    right: 45vw;
+                    width: 13vw;
+                }
+                #mirror {
+                    position: fixed;
+                    bottom: 0px;
+                    right: 1px;
+                    width: 500px;
+                }
+                #black-flats {
+                    z-index: 5;
+                    position: absolute;
+                    top: 58vh;
+                    right: 28vw;
+                    width: 20vw;
+                }
+                #gold-star-necklace {
+                    z-index: 5;
+                    position: absolute;
+                    top: 156vh;
+                    left: 20.5vw;
+                    width: 28vw;
+                }
+                #deco {
+                    position: fixed;
+                    top: 0px;
+                    right: 80px;
+                    width: 200px;
+                }
+                #knit-skirt {
+                    z-index: 5;
+                    position: absolute;
+                    top: 300px;
+                    left: 50px;
+                    width: 200px;
+                }
+            
+            </style>
+        </head>
+        <body>
+            <img id="lets-go" src="lets-go.jpeg"> <!-- https://www.behance.net/gallery/5668319/Alternatives-Landscapes--> 
+            <div><a id="portfolio" href="http://pien.cargo.site/">hmmmm why don't you click this text and find out where you end up at? hmmmm why don't you click this text and find out where you end up at? hmmmm why don't you click this text and find out where you end up at?</a></div>
+            <img id="sheep" src="sheep.jpeg"> <!-- https://www.itsnicethat.com/articles/ayaka-endo-kamuy-mosir-project-photography-151222 --> 
+            <img id="water" src="water.gif"> <!-- https://gdbot.tumblr.com/post/618145283360047105/photo-httpsifttt3dntf3r-telegram-design-bot --> 
+            <img id="unicorns" src="unicorns.png"> <!-- https://www.flickr.com/photos/ninazivkovic/3524953363/ --> 
+            <div id="caps-lock">
+                <p>
+                CAPS LOCK: How Capitalism Took Hold of Graphic Design, and How to Escape from It<br>
+                by Ruben Pater<br>
+                </p>
+                On design’s complicity in systems of oppression: critique and exit strategies from the author of The Politics of Design
+                Our current economic system could not exist without the number systems, coins, banknotes, documents, advertisements, interfaces, typefaces and information graphics that graphic designers have helped to create. Even speculative design and social design play their part in fueling the economic system. Capitalism has brought tremendous wealth, but it has not done so evenly. Extreme income inequality and environmental destruction is the price future generations have to pay for unbridled economic growth. The question is whether ethical graphic design is even possible under such conditions.
+                CAPS LOCK uses clear language and visual examples to show how graphic design and capitalism are inextricably linked. By sharing examples of radical design practices that challenge the supremacy of the market, it hopes to inspire a different kind of graphic design.
+                Ruben Pater (born 1977) was trained as a graphic designer and works in journalism, activism, education and graphic design under the name Untold Stories. His work has received several international prizes and he has participated in many exhibitions worldwide. His first book, The Politics of Design (2016), has been an inspirational sourcebook for design students, artists and visual communicators in many different places and contexts; Eye on Design wrote: "It’s the kind of literature that should be handed out to all students on their first days at art school, along with all the Albers, Berger, Benjamin and Sontag that form the backbone of the design curriculum―an up-to-date assessment of the landscape through which all modern visual practitioners must navigate."
+            </div>
+            <div id="lemony">
+                I will love you until all the codes and hearts have been broken and until every anagram and egg has been unscrambled. 
+                ― Lemony Snicket, The Beatrice Letters
+            </div>
+            <div id="sign">
+                oh wait, what's that glowing square down there...hm....I wonder what that's all about
+            </div>
+            <img id="exposure-tree" src="exposure-tree.jpeg"> <!-- https://slobodda.de/projekte/stranger-things -->
+            <img id="bird-glass-window" src="bird-glass-window.png"> <!-- https://inhabitat.com/broken-windows-of-an-abandoned-building-are-turned-into-unexpected-works-of-art/ --> 
+            <img id="jp-stool" src="jp-stool.png"> <!-- insta @annabel_davidson_yeah  -->
+            <img id="white-flower" src="white-flower.png"> <!-- https://www.getty.edu/art/exhibitions/zeitgeist/ -->
+            <img id="ivory-flower" src="ivory-flower.png"> <!-- https://www.pinterest.com/pin/128493395606814767/ -->
+            <a href="https://salon94design.com/designers/thomas-barger/artworks/heaven-bound"><img id="blue-shelf" src="blue-shelf.png"> <!-- salon94design.com --> </a>
+            <a href="https://www.instagram.com/lauracatherinesoto/?img_index=1"><img id="mirror" src="mirror.png"> <!-- insta @lauracatherinesoto --></a>
+            <img id="deco" src="deco.png"> <!-- insta @lama_r__ --> 
+            <img id="cherry-top" src="cherry-top.png"> <!-- insta @lamb_cake -->
+            <img id="swan-top" src="swan-top.png"> <!-- insta @bugknit -->
+            <a href="https://arcadeshops.com/products/alaia-leather-cutout-mini-skirt"><img id="alaia-skirt" src="alaia-skirt.png"> <!-- insta @noausterity --> </a>
+            <a href="https://en.wikipedia.org/wiki/Martin_Margiela"><img id="mm-bomber" src="mm6-jacket.png"> <!-- insta @lanausee_store --> </a>
+            <img id="koji-kuga-boots" src="koji-kuga-boots.png"> <!-- insta @junkpile.shop -->
+            <img id="black-flats" src="black-flats.png"> <!-- insta @biscuitshop_official --> 
+            <img id="gold-star-necklace" src="gold-star-necklace.png"> <!-- insta @takaradesign --> 
+            <a href="https://www.google.com/search?q=timer&oq=timer+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABixAxiABDIKCAIQABixAxiABDIKCAMQABixAxiABDIKCAQQLhixAxiABDIKCAUQABixAxiABDIKCAYQABixAxiABDIKCAcQABixAxiABDIKCAgQABixAxiABDIKCAkQLhixAxiABNIBCDM1MzNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8"><img id="clock" src="clock.png"> <!-- insta @ceramicsalyssa --> </a>
+            <img id="knit-skirt" src="knit-skirt.png"> <!-- insta @mi_bymikayla -->
+
+        </body>
+    </html>
