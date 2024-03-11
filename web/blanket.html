@@ -18,6 +18,15 @@
                     width: 3vw;
                     opacity:1;
                 }
+            #pearl2 {
+                    z-index: 10;
+                    position: fixed;
+                    bottom: 2vh;
+                    right: 1vw;
+                    width: 3vw;
+                    opacity:1;
+                    display: none;
+                }
             #space-trip {
                     z-index: -2;
                     position: fixed;
@@ -154,6 +163,7 @@
             </div>
             <img id="birthday" src="19991117.gif"> <!--https://apod.nasa.gov/apod/ap991117.html-->
             <img id="pearl" src="pearl.png"> <!-- https://purepng.com/photo/27935/objects-pearl -->
+            <img id="pearl2" src="pearl.png"> <!-- https://purepng.com/photo/27935/objects-pearl -->
             <img id="phases" src="phases.gif"> <!--https://www.pinterest.com/pin/834362268477890333/-->
             <img id="lune" src="lune.png"> <!--https://www.vogue.fr/beaute/article/5-rituels-wellness-a-faire-les-jours-de-pleine-lune-->
             <img id="space-trip" src="space-trip.gif"> <!--https://www.pinterest.com/pin/759560293416513664/-->
@@ -208,7 +218,17 @@ Explanation: Humans once walked on the Moon. Pictured above is the second person
                 <script>
                     window.onload = function() {
                document.getElementById("moon-box").innerHTML = Date();
-           }
+           }    
+
+           document.getElementById('pearl').addEventListener('click', function() {
+    document.getElementById('pearl').style.display = 'none';
+    document.getElementById('pearl2').style.display = 'block';
+});
+
+document.getElementById('pearl2').addEventListener('click', function() {
+    document.getElementById('pearl2').style.display = 'none';
+    document.getElementById('pearl').style.display = 'block';
+});
                 </script>
                 Tonight, a lucky few may see a meteor explode. Over the next 36 hours the Earth will pass unusually close to debris expelled from Comet Tempel-Tuttle, causing many sand-sized particles from this comet to enter and burn up in the Earth's atmosphere. This yearly phenomenon is known as the Leonids Meteor Shower, but the location the Earth passes through this year holds promise to provide particularly high activity. The 1998 Leonids was noteworthy for its many bright meteors. In the above slow-loading sequence, a 1998 Leonid was caught exploding over Los Alamos, New Mexico. In the last one-minute exposure, another Leonid streaks past. If tonight is clear, just grab a lawn chair and a warm jacket, go outside, and LOOK UP!
             </div>
