@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    p {
+      margin-top: 0em;
+    }
+    .line-break {
+      margin-bottom: 0.5px; /* Adjust the margin between line breaks */
+    }
+    .container-one, .container-two, .container-three, .container-four  {
+      position: relative; /* Position relative to contain absolutely positioned elements */
+      overflow-x: auto; /* Enable horizontal scrolling if content overflows container */
+      white-space: nowrap; /* Prevent wrapping of images */
+      text-align: left; /* Center align the images */
+    }
+    #title {
+      text-align: center; /* Center align the title */
+      font-family: Arial;
+      font-weight: bold;
+    }
+    #description {
+      position: fixed;
+      text-align: left;
+      font-family: Arial;
+      font-weight: bold;
+      bottom: 1vh;
+    }
+    #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve, #thirteen, #fourteen, #fifteen, #sixteen {
+      text-align: left; /* Center align the title */
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve, #thirteen, #fourteen, #fifteen, #sixteen {
+      display: inline-block;
+      cursor: pointer; /* Add cursor pointer to indicate the images are clickable */
+    }
+
+    .image {
+      display: inline-block; /* Display images inline */
+      margin-right: 2px; /* Margin between images */
+      cursor: pointer; /* Add cursor pointer to indicate the images are clickable */
+      max-width: 100%; /* Ensure images do not exceed their container's width */
+      height: 300px; /* Set the height to match the horizontal images */
+    }
+
+  </style>
+</head>
+<body>
+  <div id="title">DO YOU SEE WHAT I SEE?</div>
+  <p></p>
+  <div id="description">A series of lens-formed conversation curated by Pien Shyu. She uses a Fujifilm T30II model to create these photos, and will continue capturing, gathering and sparking conversations/stories across time and space.</div> 
+  <div class="container-one">
+    <div id="one" onclick="toggleVisibility('a')">1</div>
+    <img id="a" class="image" src="s1-1.JPG" style="display: none;" onclick="toggleVisibility('aa')">
+    <img id="aa" class="image" src="s1-2.JPG" style="display: none;" onclick="toggleVisibility('aaa')">
+    <img id="aaa" class="image" src="s1-3.JPG" style="display: none;" onclick="hideAllImages1()">
+    <div class="line-break"></div>
+  </div>
+  <div class="container-two">
+    <div class="line-break"></div>
+    <div id="two" onclick="toggleVisibility('b')">2</div>
+    <img id="b" class="image" src="s2-1.JPG" style="display: none;" onclick="toggleVisibility('bb')">
+    <img id="bb" class="image" src="s2-2.JPG" style="display: none;" onclick="toggleVisibility('bbb')">
+    <img id="bbb" class="image" src="s2-3.JPG" style="display: none;" onclick="toggleVisibility('bbbb')">
+    <img id="bbbb" class="image" src="s2-4.JPG" style="display: none;" onclick="toggleVisibility('bbbbb')">
+    <img id="bbbbb" class="image" src="s2-5.JPG" style="display: none;" onclick="toggleVisibility('bbbbbb')">
+    <img id="bbbbbb" class="image" src="s2-6.JPG" style="display: none;" onclick="hideAllImages2()">
+  </div>
+  <div class="container-three">
+    <div class="line-break"></div>
+    <div id="three" onclick="toggleVisibility('c')">3</div>
+    <img id="c" class="image" src="s3-1.JPG" style="display: none;" onclick="toggleVisibility('cc')">
+    <img id="cc" class="image" src="s3-2.JPG" style="display: none;" onclick="toggleVisibility('ccc')">
+    <img id="ccc" class="image" src="s3-3.JPG" style="display: none;" onclick="hideAllImages3()">
+  </div>
+  <div class="container-four">
+    <div class="line-break"></div>
+    <div id="four" onclick="toggleVisibility('d')">4</div>
+    <img id="d" class="image" src="s4-1.JPG" style="display: none;" onclick="toggleVisibility('dd')">
+    <img id="dd" class="image" src="s4-2.JPG" style="display: none;" onclick="toggleVisibility('ddd')">
+    <img id="ddd" class="image" src="s4-3.JPG" style="display: none;" onclick="toggleVisibility('dddd')">
+    <img id="dddd" class="image" src="s4-4.JPG" style="display: none;" onclick="toggleVisibility('ddddd')">
+    <img id="ddd" class="image" src="s4-5.JPG" style="display: none;" onclick="toggleVisibility('dddddd')">
+    <img id="ddd" class="image" src="s4-6.JPG" style="display: none;" onclick="hideAllImages4()">
+  </div>
+  <div class="container-five">
+    <div class="line-break"></div>
+    <div id="five" onclick="toggleVisibility('e')">5</div>
+    <img id="e" class="image" src="s5-1.png" style="display: none;" onclick="toggleVisibility('ee')">
+    <img id="ee" class="image" src="s5-2.png" style="display: none;" onclick="toggleVisibility('eee')">
+    <img id="eee" class="image" src="s5-3.png" style="display: none;" onclick="toggleVisibility('eeee')">
+    <img id="eeee" class="image" src="s5-4.png" style="display: none;" onclick="hideAllImages5()">
+  </div>
+  <div class="container-six">
+    <div class="line-break"></div>
+    <div id="six" onclick="toggleVisibility('f')">6</div>
+    <img id="f" class="image" src="s6-1.png" style="display: none;" onclick="toggleVisibility('ff')">
+    <img id="ff" class="image" src="s6-2.png" style="display: none;" onclick="toggleVisibility('fff')">
+    <img id="fff" class="image" src="s6-3.png" style="display: none;" onclick="hideAllImages6()">
+  </div>
+  <div class="container-seven">
+    <div class="line-break"></div>
+    <div id="seven" onclick="toggleVisibility('g')">7</div>
+    <img id="g" class="image" src="s7-1.png" style="display: none;" onclick="toggleVisibility('gg')">
+    <img id="gg" class="image" src="s7-2.png" style="display: none;" onclick="toggleVisibility('ggg')">
+    <img id="ggg" class="image" src="s7-3.png" style="display: none;" onclick="hideAllImages7()">
+  </div>
+  <div class="container-eight">
+    <div class="line-break"></div>
+    <div id="eight" onclick="toggleVisibility('h')">8</div>
+    <img id="h" class="image" src="s8-1.png" style="display: none;" onclick="toggleVisibility('hh')">
+    <img id="hh" class="image" src="s8-2.png" style="display: none;" onclick="toggleVisibility('hhh')">
+    <img id="hhh" class="image" src="s8-3.png" style="display: none;" onclick="toggleVisibility('hhhh')">
+    <img id="hhh" class="image" src="s8-4.png" style="display: none;" onclick="hideAllImages8()">
+  </div>
+  <div class="container-nine">
+    <div class="line-break"></div>
+    <div id="nine" onclick="toggleVisibility('i')">9</div>
+    <img id="i" class="image" src="s9-1.png" style="display: none;" onclick="toggleVisibility('ii')">
+    <img id="ii" class="image" src="s9-2.png" style="display: none;" onclick="toggleVisibility('iii')">
+    <img id="iii" class="image" src="s9-3.png" style="display: none;" onclick="toggleVisibility('iiii')">
+    <img id="iiii" class="image" src="s9-4.png" style="display: none;" onclick="hideAllImages9()">
+  </div>
+  <div class="container-ten">
+    <div class="line-break"></div>
+    <div id="ten" onclick="toggleVisibility('j')">10</div>
+    <img id="j" class="image" src="s10-1.png" style="display: none;" onclick="toggleVisibility('jj')">
+    <img id="jj" class="image" src="s10-2.png" style="display: none;" onclick="toggleVisibility('jjj')">
+    <img id="jjj" class="image" src="s10-3.png" style="display: none;" onclick="toggleVisibility('jjjj')">
+    <img id="jjjj" class="image" src="s10-4.png" style="display: none;" onclick="hideAllImages10()">
+  </div>
+  <div class="container-eleven">
+    <div class="line-break"></div>
+    <div id="eleven" onclick="toggleVisibility('k')">11</div>
+    <img id="k" class="image" src="s11-1.png" style="display: none;" onclick="toggleVisibility('kk')">
+    <img id="kk" class="image" src="s11-2.png" style="display: none;" onclick="toggleVisibility('kkk')">
+    <img id="kkk" class="image" src="s11-3.png" style="display: none;" onclick="toggleVisibility('kkkk')">
+    <img id="kkkk" class="image" src="s11-4.png" style="display: none;" onclick="toggleVisibility('kkkkk')">
+    <img id="kkkk" class="image" src="s11-5.png" style="display: none;" onclick="hideAllImages11()">
+  </div>
+  <div class="container-twelve">
+    <div class="line-break"></div>
+    <div id="twelve" onclick="toggleVisibility('l')">12</div>
+    <img id="l" class="image" src="s12-1.png" style="display: none;" onclick="toggleVisibility('ll')">
+    <img id="ll" class="image" src="s12-2.png" style="display: none;" onclick="toggleVisibility('lll')">
+    <img id="lll" class="image" src="s12-3.png" style="display: none;" onclick="hideAllImages12()">
+  </div>
+  <div class="container-thirteen">
+    <div class="line-break"></div>
+    <div id="thirteen" onclick="toggleVisibility('m')">13</div>
+    <img id="m" class="image" src="s13-1.png" style="display: none;" onclick="toggleVisibility('mm')">
+    <img id="mm" class="image" src="s13-2.png" style="display: none;" onclick="hideAllImages13()">
+  </div>
+  <div class="container-fourteen">
+    <div class="line-break"></div>
+    <div id="fourteen" onclick="toggleVisibility('n')">14</div>
+    <img id="n" class="image" src="s14-1.png" style="display: none;" onclick="toggleVisibility('nn')">
+    <img id="nn" class="image" src="s14-2.png" style="display: none;" onclick="hideAllImages14()">
+  </div>
+  <div class="container-fifteen">
+    <div class="line-break"></div>
+    <div id="fifteen" onclick="toggleVisibility('o')">15</div>
+    <img id="o" class="image" src="s15-1.png" style="display: none;" onclick="toggleVisibility('oo')">
+    <img id="oo" class="image" src="s15-2.png" style="display: none;" onclick="toggleVisibility('ooo')">
+    <img id="ooo" class="image" src="s15-3.png" style="display: none;" onclick="hideAllImages15()">
+  </div>
+  <div class="container-sixteen">
+    <div class="line-break"></div>
+    <div id="sixteen" onclick="toggleVisibility('p')">16</div>
+    <img id="p" class="image" src="s16-1.png" style="display: none;" onclick="toggleVisibility('pp')">
+    <img id="pp" class="image" src="s16-2.png" style="display: none;" onclick="toggleVisibility('ppp')">
+    <img id="ppp" class="image" src="s16-3.png" style="display: none;" onclick="toggleVisibility('pppp')">
+    <img id="pppp" class="image" src="s16-4.png" style="display: none;" onclick="hideAllImages16()">
+  </div>
+
+
+  <script>
+    function toggleVisibility(showId) {
+      var currentImage = document.getElementById(showId);
+      currentImage.style.display = "inline";
+    }
+
+    function hideAllImages() {
+      var images = document.querySelectorAll('.image');
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+    }
+    
+    function hideAllImages() {
+      for (var j = 1; j <= 16; j++) {
+        var functionName = 'hideAllImages' + j;
+        window[functionName]();
+      }
+    }
+  </script>
+</body>
+</html>
