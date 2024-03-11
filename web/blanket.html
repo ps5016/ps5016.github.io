@@ -8,9 +8,18 @@
           <style>
             body {
                     background-color: rgb(0, 0, 0);
+                    cursor: vertical-text;
+                }
+            #pearl {
+                    z-index: 10;
+                    position: fixed;
+                    bottom: 2vh;
+                    left: 1vw;
+                    width: 3vw;
+                    opacity:1;
                 }
             #space-trip {
-                    z-index: 5;
+                    z-index: -2;
                     position: fixed;
                     bottom: 4vh;
                     right: 2vw;
@@ -46,7 +55,7 @@
                     z-index: -1;
                     position: fixed;
                     top: 0vh;
-                    left: 0vw;
+                    left: -5vw;
                     width: 50vw;
                     opacity: .7;
                 } 
@@ -55,7 +64,7 @@
                     position: absolute;
                     top: 50vh;
                     left: 10vw;
-                    width: 40vw;
+                    width: 36vw;
                     opacity: .7;
             }
             #lune {
@@ -67,29 +76,34 @@
                     opacity: .7;
             }    
             #phases {
-                    z-index: 50;
-                    position: fixed;
-                    top: 60vh;
-                    right: 30vw;
-                    width: 15vw;
+                    z-index: -1;
+                    position: absolute;
+                    top: 94vh;
+                    right: 32vw;
+                    width: 20vw;
                     opacity: .7;
             }
-            /* #comet {
-                    z-index: -5;
-                    position: fixed;
-                    top: 10vh;
-                    right: 20vw;
+            #birthday {
+                    z-index: 3;
+                    position: absolute;
+                    top: 95vh;
+                    left: 1vw;
                     width: 30vw;
-            } */
-            /* #two-tails {
-                    z-index: -5;
-                    position: fixed;
-                    top: 60vh;
-                    left: 10vw;
-                    width: 20vw;
-                    transform: scaleX(1);
-                    transform: rotate(-10deg);
-            } */
+                    opacity: 1;
+            }
+            #moon-box {
+                    position: absolute;
+                    width: 350px;
+                    height: 350px;
+                    top: 95vh;
+                    right: 32.5vw;
+                    background-color: transparent;
+                    border: 2px solid rgb(5, 175, 5);
+                    cursor: pointer;
+                    }
+            
+            /* --------- IMAGES --------- TEXT --------- */
+
             #sun {
                 color: rgb(253, 213, 213);
                 text-align: justify;
@@ -115,9 +129,31 @@
                 text-align: justify;
                 font-family: cursive;
             }
+            #birthday-text {
+                z-index: 5;
+                position: absolute;
+                color:rgb(0, 9, 136);
+                background-color:rgba(255, 38, 38, 0.866);
+                left: 30vw;
+                top: 98vh;
+                width: 18vw;
+                font-size: 20px;
+                font-family: Arial, bold;
+                /* font-style: italic; */
+                text-align: center;
+                /* text-decoration-line: underline;
+                text-decoration-color: rgb(211, 253, 221); */
+                /* text-transform: uppercase; */
+            }
+            
           </style>
         </head>
         <body>
+
+            <div id="moon-box">
+            </div>
+            <img id="birthday" src="19991117.gif"> <!--https://apod.nasa.gov/apod/ap991117.html-->
+            <img id="pearl" src="pearl.png"> <!-- https://purepng.com/photo/27935/objects-pearl -->
             <img id="phases" src="phases.gif"> <!--https://www.pinterest.com/pin/834362268477890333/-->
             <img id="lune" src="lune.png"> <!--https://www.vogue.fr/beaute/article/5-rituels-wellness-a-faire-les-jours-de-pleine-lune-->
             <img id="space-trip" src="space-trip.gif"> <!--https://www.pinterest.com/pin/759560293416513664/-->
@@ -167,6 +203,14 @@ APOD: 2003 May 22 - Eclipsed Moon Montage
 Explanation: After watching this month's lunar eclipse, amateur astronomer Sebastien Gauthier carefully composed this montage of telescopic images of the Moon sliding through planet Earth's shadow. While the deepest part of the total eclipse corresponds to the central exposure, the play of light across the lunar surface nicely demonstrates that the planet's shadow is not uniformly dark as it extends into space. In fact, lunar maria and montes are still visible in the dimmed, reddened sunlight scattered into the cone-shaped shadow region, or umbra, by Earth's atmosphere. For this eclipse, the Moon's trajectory took it North of the umbra's darker core, seen here cast over the Moon's cratered southern highlands. Gauthier's telescope and camera equipment were set up near the Trois-Rivieres College Champlain Observatory in Quebec, Canada.
 APOD: 1998 May 3 - Standing on the Moon
 Explanation: Humans once walked on the Moon. Pictured above is the second person to stand on the lunar surface: Edwin "Buzz" Aldrin. During this Apollo 11 mission, Neil Armstrong (the first person to walk on the moon) and Buzz Aldrin landed on the Moon while Michael Collins circled in the Command Module above. The lunar team erected a plaque on the surface that reads: HERE MEN FROM THE PLANET EARTH FIRST SET FOOT UPON THE MOON JULY 1969 A.D. WE CAME IN PEACE FOR ALL MANKIND. The Apollo missions demonstrated that it is possible to land humans on the Moon and return them safely.
+            </div>
+            <div onclick="innerHTML = Date()" id="birthday-text">
+                <script>
+                    window.onload = function() {
+               document.getElementById("moon-box").innerHTML = Date();
+           }
+                </script>
+                Tonight, a lucky few may see a meteor explode. Over the next 36 hours the Earth will pass unusually close to debris expelled from Comet Tempel-Tuttle, causing many sand-sized particles from this comet to enter and burn up in the Earth's atmosphere. This yearly phenomenon is known as the Leonids Meteor Shower, but the location the Earth passes through this year holds promise to provide particularly high activity. The 1998 Leonids was noteworthy for its many bright meteors. In the above slow-loading sequence, a 1998 Leonid was caught exploding over Los Alamos, New Mexico. In the last one-minute exposure, another Leonid streaks past. If tonight is clear, just grab a lawn chair and a warm jacket, go outside, and LOOK UP!
             </div>
         </body>
       </html>
