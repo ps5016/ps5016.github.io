@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>░l░o░s░t░ ░s░o░m░e░t░h░i░n░g░?░
+    </title>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="paperclip.png">
+    <style>
+
+        body {
+            background-color:rgb(235, 242, 252);
+            margin: 0;
+            padding: 0;          
+        }
+
+        #bg {
+          z-index: -1000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url('bg.JPG'); 
+          background-size: cover; 
+          background-position: center;
+          background-repeat: no-repeat; 
+        }
+        #heading {
+          z-index: 1;
+          /* margin: 0; */
+          /* padding: 0; */
+          position: absolute;
+          top: 0vh;
+          right: 0.5vw;
+          /* height: 100vh; */
+          /* display: flex; */
+          /* justify-content: center;
+          align-items: center; */
+          font-family: Georgia, serif;
+          font-size: 8px;
+          color:rgb(42, 89, 243);
+          /* text-align: center; */
+          /* line-height: center; */
+        }
+
+        .metal {
+          position: fixed;
+          width: 28vw;
+        }
+        .metal img {
+          position: absolute;
+          top: 2vh;
+          left: 2vw;
+          width: 130%;
+          height: auto;
+          opacity: 1;
+        }
+        .metaloverlay {
+          opacity: 0; /* Initially hide the overlay image */
+        }
+        .metal:hover .metaloverlay {
+          opacity: 1; 
+          -webkit-transform: translateZ(0); /* Force hardware acceleration */
+          transform: translateZ(0);
+        }
+
+        .files {
+          position: fixed;
+          width: 18vw;
+          margin: 0;
+          padding: 0;         
+        } 
+        #cardholder {
+          z-index: 10;
+          position: absolute;
+          width: 120%;
+          top: 64vh;
+          left: 17.5vw;
+        }
+        #contactme {
+          position: absolute;
+          /* top: 40vh;
+          left: 4vw; */
+          width: 70%;
+          top: 3vh;
+          left: 85vw;
+        }
+
+        .buttons {
+          position: fixed;
+          width: 7vw;
+          top: 43vh;
+          left: 1vw;
+        } 
+        #press {
+          position: fixed; 
+          width: 6%;
+          border-radius: 3px;
+        }
+        #forgotten {
+          position: absolute;
+          z-index: 100;
+          display: none;
+          color: rgb(232, 231, 248);
+          font-family: monospace;
+          font-size: 9px;
+        }
+
+        .topdowndrawer {
+            position: fixed;
+            width: 15vw;
+            top: 55vh;
+            left: 1vw;
+            height: auto; 
+        }
+        #topDrawer {
+            position: absolute; 
+            width: 100%;
+        }
+        #bottomDrawer {
+            position: absolute; 
+            width: 100%;
+            top: 100%; 
+            transform: translateY(100%); 
+        }
+
+        .moniter {
+          position: fixed;
+          width: 40vw;
+        }
+        #moniter {
+          position: absolute; 
+          width: 93%;
+          border-radius: 5px;
+          top: 35vh;
+          left: 61vw;
+        }
+        #pdf {
+          position: absolute; 
+          width: 7%;
+          top: 50vh;
+          left: 69vw;
+        }
+
+        .offwhite {
+          position: fixed;
+          width: 21vw;
+          top: 43vh;
+          left: 39.5vw;
+        }
+        #metaltop {
+          position: absolute; 
+          width: 100%;
+        }
+        #metalmiddle {
+            position: absolute; 
+            width: 100%;
+            top: 100%; 
+            transform: translateY(130%); 
+        }
+        #locked {
+          position: absolute;
+          z-index: 100;
+          display: none;
+          color: rgb(232, 231, 248);
+          font-family: monospace;
+          font-size: 9px;
+        }
+        #metalbottom {
+            position: absolute; 
+            width: 100%;
+            top: 100%; 
+            transform: translateY(105%); 
+        }
+        #nasa {
+          position: absolute; 
+            width: 50%;
+            top: 100%; 
+            transform: translateY(0%); 
+            transform: translateX(20%); 
+        }
+
+        .paperstack {
+          z-index: 100;
+          position: fixed;
+          width: 18vw;
+          top: 43.5vh;
+          left: 20vw;
+        }
+        #paperstack {
+          position: absolute; 
+          width: 100%;
+        }
+
+        .video {
+          position: fixed;
+          width: 25vw;
+        }
+        #playvid {
+          position: absolute; 
+          width: 100%;
+          top: 15vh;
+          left: 40vw;
+        }
+
+        .tray {
+          position: fixed;
+          width: 15vw;
+        }
+        #tray {
+          position: absolute; 
+          width: 73%;
+          top: 3vh;
+          left: 69vw;
+          rotate: -45deg;
+        }
+        #nasa {
+          position: absolute; 
+          width: 72%;
+          top: 500vh;
+          left: 67vw;
+          rotate: 20deg;
+        }
+
+        .flyers {
+          position: fixed;
+          width: 19vw;
+        }
+        #office {
+          position: absolute; 
+          width: 76%;
+          left: 83vw;
+          top: 35vh;
+        }
+
+
+    </style>
+  </head>
+  <body>
+        <div class="bg">
+          <img id="bg" src="bg.JPG">
+        </div>
+        
+        <div class="metal">
+          <div class="metaldefault" >
+            <img id="metalcabinet" src="metalcabinet.png">
+          </div>
+          <div class="metaloverlay">
+            <img id="metalopen" src="metalopen.png" onclick="metal_openWindow()">
+          </div>
+        </div>
+        
+        <div class="files">
+          <img id="cardholder" src="metallittle.png" onclick="spreadsheet_openWindow()">
+          <a href="https://forms.gle/mwy5UfwWSWcQSf9X9" target="_blank"><img id="contactme" src="contactme.png"></a>
+        </div>
+
+        <div class="buttons">
+          <img id="press" src="press.jpeg" title="press to forget">
+        </div>
+        <div id="forgotten" style="display: none;">Forgotten completed.</div>
+        <audio id="myAudio">
+          <source type="audio/mpeg" src="doorbell.wav">
+        </audio>
+
+        <div class="topdowndrawer">
+            <img id="topDrawer" src="topdrawer.png" title="top drawer">
+            <img id="bottomDrawer" src="bottomdrawer.png" onclick="bottomDrawer_openWindow()" title="bottom drawer">
+        </div>
+
+        <div class="moniter">
+          <img id="moniter" src="screen.png">
+          <img id="pdf" src="pdf.png" onclick= "pdf_openWindow()">
+        </div>
+
+        <div class= "offwhite">
+          <img id="metaltop" src="metaltop.png">
+          <img id="metalmiddle" src="metalmiddle.png" title="This is locked."  onclick="lockedFunction()">
+          <a href="https://www.lostings.com/lost-and-found-statistics/" target="_blank"><img id="metalbottom" src="metalbottom.png"></a>
+          <!-- <div id="locked" style="display: none;">This is locked.</div> -->
+
+        </div>
+        
+        <div class= "tray">
+          <img id="tray" src="tray.png">
+          <a href="https://www.nytimes.com/2023/11/13/science/space/nasa-lost-tool-bag-spacewalk.html" target="_blank"><img id="nasa" src="nasa.png"></a>
+        </div>
+
+
+        <div class="paperstack">
+          <img id="paperstack" src="paperstack.png" onclick= "flyers_openWindow()">
+        </div>
+
+        <div class="video">
+          <a href="https://www.youtube.com/watch?v=ESsjRYWtSjM" target="_blank"><img id="playvid" src="playvid.png"></a>
+        </div>
+
+        <div class="flyers">
+          <!-- <img id="lostconfused" src="lostconfused.png"> -->
+          <img id="office" src="office.png" title="a note">
+          <!-- <img id="officeback" src="officeback.png"> -->
+
+        </div>
+
+  </body>
+  <script>
+//open windows
+var metalWindow = null;
+var pdfWindow = null;
+var ssWindow = null;
+var flyersWindow = null;
+var topDrawerWindow = null;
+var bottomDrawerWindow = null;
+
+  function metal_openWindow() {
+    // Check if window is already open, if not, open a new window
+    if (!metalWindow || metalWindow.closed) {
+      // Calculate window position
+      var leftPosition = window.screenX + 50;
+      var topPosition = window.screenY + 50;
+      metalWindow = window.open("http://127.0.0.1:5500/lostreddit.html", "metalWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=400,height=500");
+    } else {
+      metalWindow.focus();
+    }
+  }
+
+  function pdf_openWindow() {
+    if (!pdfWindow || pdfWindow.closed) {
+      var leftPosition = window.screenX + 100; 
+      var topPosition = window.screenY + 100; 
+      pdfWindow = window.open("http://127.0.0.1:5500/iwillloveyou.html", "pdfWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=400,height=300");
+    } else {
+      pdfWindow.focus();
+    }
+  }
+
+      function spreadsheet_openWindow() {
+    if (!ssWindow || ssWindow.closed) {
+      var leftPosition = window.screenX + 600; 
+      var topPosition = window.screenY + 50; 
+      ssWindow = window.open("https://docs.google.com/spreadsheets/d/1X4nptyxXRRODe292OgIkztJpU_NqDf0x9zFRS-nG9RM/edit#gid=1638896154", "pdfWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=400,height=1000");
+    } else {
+      ssWindow.focus();
+    }
+  }
+
+      function flyers_openWindow() {
+    if (!flyersWindow || flyersWindow) {
+      var leftPosition = window.screenX + 100; 
+      var topPosition = window.screenY + 100; 
+      flyersWindow = window.open("http://127.0.0.1:5500/flyers.html", "flyersWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=600,height=1000");
+    } else {
+      flyersWindow.focus();
+    }
+  }
+
+
+  document.getElementById("topDrawer").addEventListener("click", function() {
+    if (!topDrawerWindow || topDrawerWindow.closed) {
+        var leftPosition = window.screenX + 600; 
+        var topPosition = window.screenY + 50; 
+        topDrawerWindow = window.open("http://127.0.0.1:5500/dontopennotebook.html", "topDrawer", "left=" + leftPosition + ",top=" + topPosition + ",width=300,height=430");
+    } else {
+        topDrawerWindow.focus();
+    }
+  });
+
+
+  function bottomDrawer_openWindow() {
+    if (!bottomDrawerWindow || bottomDrawerWindow) {
+      var leftPosition = window.screenX + 100; 
+      var topPosition = window.screenY + 100; 
+      bottomDrawerWindow = window.open("http://127.0.0.1:5500/items.html", "bottomDrawerWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=500,height=500");
+    } else {
+      bottomDrawerWindow.focus();
+    }
+  }
+//open windows
+
+//note on moniter//   
+const shownnote = document.getElementById("office");
+const shownnoteback = document.getElementById("officeback");
+
+let shownImage = true;
+
+shownnote.addEventListener("click", function() {
+  if (shownImage) {
+    shownnote.src = "office.png";
+  } else {
+    shownnote.src = "officeback.png";
+  }
+  shownImage = !shownImage;
+});
+//note on moniter//  
+
+//locked//
+function lockedFunction() {
+  alert("Sorry this one doesn't open!");
+}
+// var metalmiddle = document.getElementById('metalmiddle');
+// var locked = document.getElementById('locked');
+// document.addEventListener('mousedown', mouseDown);
+// document.addEventListener('mouseup', mouseUp);
+
+// function mouseDown() {
+//     locked.style.display = 'block';
+//     locked.style.left = (event.clientX - 25) + 'px'; 
+//     locked.style.top = (event.clientY + 18) + 'px';
+// }
+
+// function mouseUp() {
+//   locked.style.display = 'none'; 
+// }
+
+// metalmiddle.addEventListener('mousedown', function(event) {
+//     locked.style.display = 'block';
+//     locked.style.left = (event.clientX - 25) + 'px'; 
+//     locked.style.top = (event.clientY + 18) + 'px';
+// });
+
+// document.addEventListener('mouseup', function() {
+//     locked.style.display = 'none'; 
+// });
+//locked//
+
+
+//doorbell//
+var press = document.getElementById('press');
+    var forgotten = document.getElementById('forgotten');
+    const audioDoorbell = document.getElementById('press')
+    const audio = document.getElementById("myAudio")
+
+press.addEventListener('mousedown', function(event) {
+
+    var pressRect = press.getBoundingClientRect();
+    var pressCenterX = pressRect.left + pressRect.width / 2;
+    var pressCenterY = pressRect.top + pressRect.height / 2;
+      
+    var range = 10;
+    
+    if (event.clientX >= pressCenterX - range &&
+        event.clientX <= pressCenterX + range &&
+        event.clientY >= pressCenterY - range &&
+        event.clientY <= pressCenterY + range) {
+        
+        forgotten.style.display = 'block';
+        forgotten.style.left = (event.clientX - 25) + 'px'; 
+        forgotten.style.top = (event.clientY + 18) + 'px';
+        audioDoorbell.addEventListener("click", () => {
+        audio.play();
+      }
+    )}
+});
+  document.addEventListener('mouseup', function() {
+      forgotten.style.display = 'none'; 
+  });
+  //doorbell//
+
+  //nasa//
+  document.addEventListener('DOMContentLoaded', function() {
+    const nasa = document.getElementById('nasa');
+    const metaltop = document.getElementById('metaltop');
+
+    // Event listener for clicking on #metaltop
+    metaltop.addEventListener('click', function() {
+        // Change the top position of #nasa
+        nasa.style.top = '11vh';
+    });
+});
+  //nasa//
+
+  </script>
+</html>
+
+
