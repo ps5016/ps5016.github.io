@@ -279,7 +279,7 @@
 
         <div class= "offwhite">
           <img id="metaltop" src="metaltop.png">
-          <img id="metalmiddle" src="metalmiddle.png" title="This is locked.">
+          <img id="metalmiddle" src="metalmiddle.png" title="This is locked."  onclick="lockedFunction()">
           <a href="https://www.lostings.com/lost-and-found-statistics/" target="_blank"><img id="metalbottom" src="metalbottom.png"></a>
           <!-- <div id="locked" style="display: none;">This is locked.</div> -->
 
@@ -363,7 +363,7 @@ var bottomDrawerWindow = null;
     if (!topDrawerWindow || topDrawerWindow.closed) {
         var leftPosition = window.screenX + 600; 
         var topPosition = window.screenY + 50; 
-        topDrawerWindow = window.open("http://127.0.0.1:5500/dontopennotebook.html", "topDrawer", "left=" + leftPosition + ",top=" + topPosition + ",width=300,height=480");
+        topDrawerWindow = window.open("http://127.0.0.1:5500/dontopennotebook.html", "topDrawer", "left=" + leftPosition + ",top=" + topPosition + ",width=300,height=430");
     } else {
         topDrawerWindow.focus();
     }
@@ -398,6 +398,9 @@ shownnote.addEventListener("click", function() {
 //note on moniter//  
 
 //locked//
+function lockedFunction() {
+  alert("Sorry this one doesn't open!");
+}
 // var metalmiddle = document.getElementById('metalmiddle');
 // var locked = document.getElementById('locked');
 // document.addEventListener('mousedown', mouseDown);
