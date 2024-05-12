@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>I Will Love You, Beatrice...</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="envolope.png">
+    <style>
+        div#text {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        body {
+            background-color: rgb(52, 52, 52);
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+    <span id="text">
+        This is a net-based art inspired by the everyday objects and discovery of anything related to lost things.<br>
+        Feel free to click around in this digital archive room,<br>
+        opening up cabinets, drawers, hovering over items, thinking about things that have part ways with you with or without you noticing.<br>
+        This is an on going project, planned to be expanded in dynamic ways of demonstrating the concept of lost<br>
+        Feel free to give feedback to the creator via the googlesheet in the site or @pienshyu on Instagram :0
+    </span>       
+</div>
+
+    </span>
+</div>
+<script>
+    var textElement = document.getElementById("text"),
+        text = textElement.innerHTML,
+        visibleText = "",
+        hiddenText = text,
+        wrapper = document.querySelector('.wrapper'),
+        lineHeight = textElement.offsetHeight / textElement.clientHeight;
+
+    function revealText() {
+        visibleText += hiddenText.charAt(0);
+        hiddenText = hiddenText.slice(1);
+        textElement.innerHTML = visibleText;
+
+        if (hiddenText.length > 0) {
+            // Auto-scroll down if the scroll position exceeds the viewport height
+            if (wrapper.scrollHeight - wrapper.scrollTop <= wrapper.clientHeight) {
+                wrapper.scrollTop += lineHeight;
+            }
+            setTimeout(revealText, 80); // Adjust the timing as needed (milliseconds)
+        }
+    }
+
+    revealText();
+</script>
+</body>
+</html>

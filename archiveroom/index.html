@@ -99,7 +99,7 @@
         #press {
           position: fixed; 
           width: 6%;
-          border-radius: 3px;
+          border-radius: 200px;
         }
         #forgotten {
           position: absolute;
@@ -331,9 +331,9 @@ var bottomDrawerWindow = null;
 
   function pdf_openWindow() {
     if (!pdfWindow || pdfWindow.closed) {
-      var leftPosition = window.screenX + 100; 
-      var topPosition = window.screenY + 100; 
-      pdfWindow = window.open("iwillloveyou.html", "pdfWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=400,height=300");
+      var leftPosition = window.screenX + 900; 
+      var topPosition = window.screenY + 400; 
+      pdfWindow = window.open("info.html", "pdfWindow", "left=" + leftPosition + ",top=" + topPosition + ",width=400,height=300");
     } else {
       pdfWindow.focus();
     }
@@ -364,7 +364,7 @@ var bottomDrawerWindow = null;
     if (!topDrawerWindow || topDrawerWindow.closed) {
         var leftPosition = window.screenX + 600; 
         var topPosition = window.screenY + 50; 
-        topDrawerWindow = window.open("dontopennotebook.html", "topDrawer", "left=" + leftPosition + ",top=" + topPosition + ",width=300,height=430");
+        topDrawerWindow = window.open("dontopennotebook.html", "topDrawer", "left=" + leftPosition + ",top=" + topPosition + ",width=500,height=450");
     } else {
         topDrawerWindow.focus();
     }
